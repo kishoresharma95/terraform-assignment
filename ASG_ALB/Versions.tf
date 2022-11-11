@@ -7,8 +7,9 @@ terraform {
     }
   }
 }
- provider "aws" {
-   access_key = "AKIA5MFCVXRZ3OOX2N7Z"
-   secret_key = "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"
-   region = "us-east-1"
+
+provider "aws" {
+  shared_config_files     = ["<path of config file"]
+  shared_credentials_files = ["<path of credentials file>"]
+  profile = "test1"
 }
